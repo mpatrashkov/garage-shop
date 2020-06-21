@@ -1,0 +1,23 @@
+.container {
+    width: 100%;
+    padding: 0 5px;
+    margin: 0 auto;
+
+    background-color: darken($color: #fff, $amount: 10);
+
+    @include media($sm) {
+        width: 540px;
+    }
+
+    @include media($md) {
+        width: 540px;
+    }
+
+    @include media($lg) {
+        width: 760px;
+    }
+
+    @include media($xl) {
+        width: 940px;
+    }
+}

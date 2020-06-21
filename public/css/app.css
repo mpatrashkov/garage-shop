@@ -1,0 +1,126 @@
+.container {
+  width: 100%;
+  padding: 0 5px;
+  margin: 0 auto;
+  background-color: #e6e6e6;
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 540px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 760px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 940px;
+  }
+}
+
+.nav {
+  background-color: red;
+  height: 50px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  margin: 0 -5px;
+  padding: 10px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    height: 75px;
+  }
+}
+
+.nav--firstRow {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .nav--firstRow-menu,
+  .nav--firstRow-title,
+  .nav--firstRow-actions {
+    flex: 1 0 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav--firstRow-menu {
+    visibility: hidden;
+  }
+}
+
+.nav--firstRow-actions {
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .nav--firstRow-actions {
+    justify-content: flex-end;
+  }
+}
+
+.nav--secondRow {
+  position: fixed;
+  top: 50px;
+  bottom: 0;
+  left: 0;
+  right: 10%;
+  background-color: #cccccc;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nav--secondRow {
+    position: static;
+    background-color: inherit;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.nav--secondRow__open {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.app {
+  min-height: 100%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
