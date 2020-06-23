@@ -1,0 +1,30 @@
+.container {
+    width: 100%;
+    padding: 0 5px;
+    margin: 0 auto;
+
+    @include media($sm) {
+        width: 540px;
+    }
+
+    @include media($md) {
+        width: 600px;
+    }
+
+    @include media($lg) {
+        width: 840px;
+    }
+
+    @include media($xl) {
+        width: 1140px;
+    }
+}
+
+.secondaryFont {
+    font-family: "Pacifico", cursive;
+}
+
+img.fit {
+    max-width: 100%;
+    height: auto;
+}

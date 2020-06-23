@@ -1,0 +1,99 @@
+.nav {
+    background-color: $primary;
+
+    height: 50px;
+    @include media($md) {
+        height: 75px;
+    }
+
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+
+    padding: 0 10px;
+
+    display: flex;
+    align-items: center;
+
+    color: white;
+
+    z-index: 10;
+
+    &--middle {
+        flex: 1 1 auto;
+
+        @include media($md) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &--start {
+        flex: 0 0 auto;
+        @include media($md) {
+            flex: 1 0 0;
+        }
+    }
+
+    &--end {
+        display: flex;
+
+        @include media($md) {
+            flex: 1 0 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    &--title {
+        font-size: 25px;
+
+        margin-left: 5px;
+        @include media($md) {
+            margin-left: 0;
+        }
+    }
+
+    &--items {
+        position: fixed;
+        top: 50px;
+        bottom: 0;
+        left: 0;
+        right: 10%;
+
+        background-color: darken($color: #ffffff, $amount: 20);
+
+        display: none;
+
+        color: black;
+
+        @include media($md) {
+            color: white;
+
+            position: static;
+            background-color: inherit;
+
+            display: flex;
+            justify-content: center;
+        }
+
+        &__open {
+            display: block;
+        }
+    }
+
+    &--menu {
+        @include media($md) {
+            visibility: hidden;
+        }
+    }
+
+    &--action {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 0 5px;
+    }
+}

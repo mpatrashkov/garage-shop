@@ -1,0 +1,13 @@
+.btn {
+    border: none;
+    padding: 10px;
+    width: 50%;
+
+    border-radius: 0;
+    box-shadow: 3px 3px $secondary;
+
+    &__primary {
+        background-color: $primary;
+        color: white;
+    }
+}
