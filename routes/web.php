@@ -18,3 +18,7 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Route::get('/', "HomeController");
+
+Route::get('/contact-us', "ContactUsController");
+
+Route::resource('/request', "RequestController")->only(["store"]);

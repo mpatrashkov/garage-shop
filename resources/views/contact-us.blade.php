@@ -1,20 +1,16 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="homepage default-layout">
+    <div class="contact-us default-layout">
         <div class="default-layout--heading">
             <div class="container">
                 <div class="default-layout--heading-image">
-                    <img class="fit" src="https://i0.wp.com/auspusi.bg/wp-content/uploads/2015/09/baner2.jpg?fit=2356%2C1061&ssl=1" />
+                    <h2>Свържете се с нас</h2>
                 </div>
                 <div class="default-layout--heading-title">
                     <div>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, 
-                        inventore blanditiis. Asperiores suscipit quis nulla adipisci culpa 
-                        veniam voluptas iste, perferendis error possimus, deleniti aspernatur 
-                        provident ea iure deserunt necessitatibus?
-
-                        <button class="btn btn__primary">За нас</button>
+                        Чувстайте се свободни да попитате!
+                        Ще се радваме да отговорим на вашият въпрос или запитване колкото можем по-скоро.
                     </div>
                 </div>
             </div>
@@ -23,9 +19,12 @@
         <div class="container">
             <div class="default-layout--section">
                 <div class="default-layout--section-title">
-                    Промоции
+                    Форма за контакт
                 </div>
-                <x-products-carousel></x-products-carousel>
+
+                <div class="default-layout--section-content">
+                    <x-contact-form></x-contact-form>
+                </div>
             </div>
         </div>
 
@@ -44,15 +43,6 @@
                 class="fb-xfbml-parse-ignore">
                 <a href="https://www.facebook.com/facebook">Facebook</a>
             </blockquote>
-        </div>
-
-        <div class="container">
-            <div class="default-layout--section">
-                <div class="default-layout--section-title">
-                    Нови предложения
-                </div>
-                <x-products-carousel></x-products-carousel>
-            </div>
         </div>
     </div>
 @endsection
