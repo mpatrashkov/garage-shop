@@ -23,7 +23,7 @@
                     Намерете ни
                 </div>
                 <div class="default-layout--section-content">
-                    <div class="mapouter"><div class="gmap_canvas"><iframe width="800" height="350" id="gmap_canvas" src="https://maps.google.com/maps?ll=42.50479259999999,27.4626361&q=Бургас&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>undefined<a href="undefined">undefined</a>undefined</div><style>.mapouter{position:relative;text-align:right;height:350px;width:800px;}.gmap_canvas {overflow:hidden;background:none!important;height:350px;width:800px;}</style></div>
+                    <div class="mapouter"><div class="gmap_canvas"><iframe width="740" height="350" id="gmap_canvas" src="https://maps.google.com/maps?ll=42.50479259999999,27.4626361&q=Бургас&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>undefined<a href="undefined">undefined</a>undefined</div><style>.mapouter{position:relative;text-align:right;height:350px;width:740px;}.gmap_canvas {overflow:hidden;background:none!important;height:350px;width:740px;}</style></div>
                 </div>
 
                 <div class="default-layout--section-title flex align-items-center justify-content-center">

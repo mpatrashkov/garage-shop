@@ -1,0 +1,54 @@
+.product-layout {
+    .container + .container {
+        margin-top: 4rem;
+    }
+    &--overview {
+        & > div {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        &-image {
+            width: 100%;
+            
+            @include media($lg) {
+                width: 40%;
+                padding-right: 15px;
+            }
+        }
+
+        &-title {        
+            width: 100%;
+        }
+
+        &-description {
+            width: 100%;
+
+            &-text * {
+                font-family: "Open Sans", sans-serif !important;
+            }
+    
+            @include media($lg) {
+                width: 58%;
+                padding-left: 15px;
+
+                &-text {
+                    min-height: 350px;
+                }
+            }
+
+            &-price {
+                font-size: 26px;
+                font-weight: bold;
+                text-align: center;
+                padding: 20px 0;
+                border-top: 1px solid $border-light;
+                border-bottom: 1px solid $border-light;
+            }
+        }
+    
+        &-image img {
+            width: 100%;
+        }
+    }
+}

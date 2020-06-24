@@ -15,4 +15,11 @@ class Product extends Model {
     public function category() {
         return $this->belongsTo('App\Category');
     }
+
+    public function url() {
+        return route('product.detail', [
+            'id' => $this->id,
+            'slug' => $this->slug
+        ]);
+    }
 }

@@ -24,3 +24,6 @@ Route::get('/contact-us', "ContactUsController");
 Route::get('/contact-us/sent', "ContactUsController@showSent");
 
 Route::resource('/request', "RequestController")->only(["store"]);
+
+Route::get('/product/{id}/{slug?}', 'ProductController@detail')
+    ->name('product.detail');
