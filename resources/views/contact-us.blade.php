@@ -18,31 +18,23 @@
 
         <div class="container">
             <div class="default-layout--section">
-                <div class="default-layout--section-title">
-                    Форма за контакт
+                <div class="default-layout--section-title flex align-items-center justify-content-center">
+                    <span class="material-icons">location_on</span>
+                    Намерете ни
+                </div>
+                <div class="default-layout--section-content">
+                    <div class="mapouter"><div class="gmap_canvas"><iframe width="800" height="350" id="gmap_canvas" src="https://maps.google.com/maps?ll=42.50479259999999,27.4626361&q=Бургас&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>undefined<a href="undefined">undefined</a>undefined</div><style>.mapouter{position:relative;text-align:right;height:350px;width:800px;}.gmap_canvas {overflow:hidden;background:none!important;height:350px;width:800px;}</style></div>
+                </div>
+
+                <div class="default-layout--section-title flex align-items-center justify-content-center">
+                    <span class="material-icons mat-icons-mr">local_post_office</span>
+                    Свържете се с нас
                 </div>
 
                 <div class="default-layout--section-content">
                     <x-contact-form></x-contact-form>
                 </div>
             </div>
-        </div>
-
-        <div 
-            class="fb-page" 
-            data-href="https://www.facebook.com/facebook" 
-            data-tabs="" 
-            data-width="" 
-            data-height="" 
-            data-small-header="true" 
-            data-adapt-container-width="false" 
-            data-hide-cover="false" 
-            data-show-facepile="true">
-            <blockquote 
-                cite="https://www.facebook.com/facebook" 
-                class="fb-xfbml-parse-ignore">
-                <a href="https://www.facebook.com/facebook">Facebook</a>
-            </blockquote>
         </div>
     </div>
 @endsection

@@ -21,4 +21,6 @@ Route::get('/', "HomeController");
 
 Route::get('/contact-us', "ContactUsController");
 
+Route::get('/contact-us/sent', "ContactUsController@showSent");
+
 Route::resource('/request', "RequestController")->only(["store"]);

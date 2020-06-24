@@ -13,6 +13,7 @@
 
 // Layouts
 @import "layouts/default-layout";
+@import "layouts/landing-layout";
 
 // Pages
 @import "pages/homepage";
@@ -20,6 +21,7 @@
 
 @import "button";
 @import "form";
+@import "map";
 
 * {
     box-sizing: border-box;
@@ -97,8 +99,11 @@ input:focus, textarea:focus {
     width: 100%;
     margin-bottom: 1rem;
 }
-.input-wrapper input, .input-wrapper textarea {
+.input-wrapper input:not([type=checkbox]), .input-wrapper textarea {
     width: 100%;
     padding: .6rem;
     box-shadow: inset 0 2px 2px rgba(0,0,0,0.075);
+}
+label {
+    font-size: 14px;
 }
