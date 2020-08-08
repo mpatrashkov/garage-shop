@@ -1,5 +1,11 @@
 const mix = require("laravel-mix");
 
+// require('laravel-mix-bundle-analyzer');
+
+// if (!mix.inProduction()) {
+//     mix.bundleAnalyzer();
+// }
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -15,5 +21,3 @@ mix.ts("resources/js/app.ts", "public/js").sass(
     "resources/sass/app.scss",
     "public/css"
 );
-
-mix.browserSync("127.0.0.1:8000");

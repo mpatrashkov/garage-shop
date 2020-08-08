@@ -11,7 +11,9 @@
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
 
 @import "pages/homepage";
+@import "pages/products";
 @import "button";
+@import "input";
 
 * {
     box-sizing: border-box;
@@ -66,4 +68,40 @@ ul {
 a,
 button {
     cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+
+    .page-item {
+        border: 1px solid $primary;
+        display: flex;
+
+        margin: 0 5px;
+    }
+
+    .page-link {
+        padding: 10px 17px;
+
+        justify-content: center;
+        align-items: center;
+
+        cursor: pointer;
+    }
+
+    .active {
+        background-color: $primary;
+        color: white;
+    }
+
+    .disabled {
+        .page-link {
+            cursor: not-allowed;
+        }
+    }
 }

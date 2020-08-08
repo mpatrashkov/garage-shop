@@ -1,14 +1,13 @@
 import { AxiosStatic } from "axios";
-import { LoDashStatic } from "lodash";
 
 declare global {
     interface Window {
         axios: AxiosStatic;
-        _: LoDashStatic;
+        // _: LoDashStatic;
     }
 }
 
-window._ = require("lodash");
+// window._ = require("lodash");
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests

@@ -144,11 +144,27 @@ img.fit {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 300px;
+  padding: 5px;
+  height: 100%;
+}
+
+.product--imageWrapper {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  padding-top: 120%;
+  background: white;
+  position: relative;
 }
 
 .product--image {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .product--title {
@@ -158,6 +174,10 @@ img.fit {
 
 .product--price {
   margin: 10px 0;
+}
+
+.product--shop {
+  margin-top: auto;
 }
 
 .glide {
@@ -364,17 +384,161 @@ img.fit {
   font-size: 20px;
 }
 
+.products--page {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 992px) {
+  .products--page {
+    flex-direction: row;
+  }
+}
+
+.products--filtersButton {
+  margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  .products--filtersButton {
+    display: none;
+  }
+}
+
+.products--filters {
+  width: 250px;
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .products--filters {
+    display: block;
+  }
+}
+
+.products--filters-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 95px;
+  z-index: 200;
+}
+
+.products--items {
+  padding: 0 5px;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(230px, 100%), 1fr));
+}
+
+.products--itemsWrapper {
+  width: 100%;
+}
+
+.products--list-item {
+  border-top: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.products--list-item-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.products--list a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.products--nestedList {
+  margin-left: 15px;
+}
+
+.products--nestedList-item {
+  margin: 5px 0;
+  padding: 0 15px;
+}
+
+.products--nestedList-item__active {
+  background-color: #a8dadc;
+}
+
+.products--search {
+  width: 100%;
+  margin: 20px auto;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .products--search {
+    width: 75%;
+  }
+}
+
+.products--search input {
+  width: 100%;
+  padding: 10px 35px 10px 10px;
+}
+
+.products--search button {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  background: none;
+  border: none;
+}
+
+.products--form-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.products--form-buttons .btn {
+  width: 100%;
+}
+
+.products--noItems {
+  padding: 0 10px;
+  width: 100%;
+  text-align: center;
+  color: gray;
+}
+
+.products--pagination {
+  margin-top: 20px;
+}
+
 .btn {
   border: none;
   padding: 10px;
   width: 50%;
   border-radius: 0;
   box-shadow: 3px 3px #a8dadc;
+  background: none;
+  color: black;
+  display: block;
 }
 
 .btn__primary {
   background-color: #e63946;
   color: white;
+}
+
+.btn__secondary {
+  border: 1px solid;
+  border-color: #e63946;
+  box-shadow: none;
+}
+
+.input {
+  border-radius: 0px;
+  border-width: 1px;
+  height: 25px;
+  padding: 10px;
+}
+
+.input__large {
+  height: 35px;
 }
 
 * {
@@ -437,5 +601,36 @@ ul {
 a,
 button {
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination .page-item {
+  border: 1px solid #e63946;
+  display: flex;
+  margin: 0 5px;
+}
+
+.pagination .page-link {
+  padding: 10px 17px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.pagination .active {
+  background-color: #e63946;
+  color: white;
+}
+
+.pagination .disabled .page-link {
+  cursor: not-allowed;
 }
 
