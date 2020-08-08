@@ -10,14 +10,19 @@
 
         &-image {
             width: 100%;
-            
+
             @include media($lg) {
                 width: 40%;
                 padding-right: 15px;
             }
+
+            img {
+                max-height: 500px;
+                object-fit: contain;
+            }
         }
 
-        &-title {        
+        &-title {
             width: 100%;
         }
 
@@ -27,7 +32,7 @@
             &-text * {
                 font-family: "Open Sans", sans-serif !important;
             }
-    
+
             @include media($lg) {
                 width: 58%;
                 padding-left: 15px;
@@ -46,7 +51,7 @@
                 border-bottom: 1px solid $border-light;
             }
         }
-    
+
         &-image img {
             width: 100%;
         }

@@ -9,6 +9,8 @@
         {{ $product->price }}лв
     </div>
     <button class="product--shop btn btn__primary">
-        Купи
+        <a href={{ route("product.detail", $product->id) }} style="text-decoration: none; color: inherit;">
+            Купи
+        </a>
     </button>
 </div>

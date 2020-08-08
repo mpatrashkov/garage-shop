@@ -23,20 +23,30 @@ class ProductsController extends Controller
 
         $minPrice = $request->input("minPrice", $price->minPrice);
         $maxPrice = $request->input("maxPrice", $price->maxPrice);
+        $search = $request->input("q", "");
+
+        // dd($search);
 
         $products = [];
 
         if ($category) {
-            $products = Product::whereHas("category", function (Builder $query) use ($category, $minPrice, $maxPrice) {
+            $products = Product::whereHas("category", function (Builder $query) use ($category, $minPrice, $maxPrice, $search) {
                 $query->where([
                     ["name", "=", $category],
-                    ["price", ">=", $minPrice],
-                    ["price", "<=", $maxPrice]
                 ]);
-            })->with("category")->paginate(20);
+            })->with("category")->where([
+                ["price", ">=", $minPrice],
+                ["price", "<=", $maxPrice],
+                ["name", "like", "%$search%"]
+            ])->paginate(20);
         } else {
-            $products = Product::paginate(20);
+            $products = Product::where([
+                ["price", ">=", $minPrice],
+                ["price", "<=", $maxPrice]
+            ])->paginate(20);
         }
+
+        $recent = Product::all();
 
         return view("products", [
             "products" => $products,
@@ -47,7 +57,9 @@ class ProductsController extends Controller
                 "max" => $price->maxPrice,
                 "minValue" => $minPrice,
                 "maxValue" => $maxPrice
-            ]
+            ],
+            "search" => $search,
+            "recent" => $recent
         ]);
     }
 }

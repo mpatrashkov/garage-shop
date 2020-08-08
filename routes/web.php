@@ -17,11 +17,11 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-Route::get('/', "HomeController");
+Route::get('/', "HomeController")->name("home");
 
 Route::get('/products/{category?}', "ProductsController")->name("products");
 
-Route::get('/contact-us', "ContactUsController");
+Route::get('/contact-us', "ContactUsController")->name("contact-us");
 
 Route::get('/contact-us/sent', "ContactUsController@showSent");
 

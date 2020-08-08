@@ -21,6 +21,9 @@ import Vue from "vue";
 
 Vue.component("price-slider", require("./components/PriceSlider.vue").default);
 
+import VueCarousel from "vue-carousel";
+Vue.use(VueCarousel);
+
 const app = new Vue({
     el: "#app",
     data: {

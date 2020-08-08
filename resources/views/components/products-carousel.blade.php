@@ -1,31 +1,12 @@
 <div>
-    <div class="glide">
+    {{-- <div class="glide">
         <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides">
-                <li class="glide__slide">
-                    <x-product></x-product>
-                </li>
-                <li class="glide__slide">
-                    <x-product></x-product>
-                </li>
-                <li class="glide__slide">
-                    <x-product></x-product>
-                </li>
-                <li class="glide__slide">
-                    <x-product></x-product>
-                </li>
-                <li class="glide__slide">
-                    <x-product></x-product>
-                </li>
-                <li class="glide__slide">
-                    <x-product></x-product>
-                </li>
-                <li class="glide__slide">
-                    <x-product></x-product>
-                </li>
-                <li class="glide__slide">
-                    <x-product></x-product>
-                </li>
+                @foreach ($products as $product)    
+                    <li class="glide__slide">
+                        <x-product :product="$product"></x-product>
+                    </li>
+                @endforeach
             </ul>
         </div>
         <div class="glide__arrows" data-glide-el="controls">
@@ -37,5 +18,15 @@
             <button class="glide__bullet" data-glide-dir="=1"></button>
             <button class="glide__bullet" data-glide-dir="=2"></button>
         </div>
-    </div>
+    </div> --}}
+
+    <carousel :per-page="4">
+        @foreach ($products as $product)    
+            <slide>
+                <div class="productCarousel--product">
+                    <x-product :product="$product"></x-product>
+                </div>
+            </slide>
+        @endforeach
+    </carousel>
 </div>

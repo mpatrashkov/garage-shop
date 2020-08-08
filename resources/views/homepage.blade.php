@@ -25,25 +25,34 @@
                 <div class="default-layout--section-title">
                     Промоции
                 </div>
-                <x-products-carousel></x-products-carousel>
+                <x-products-carousel :products="$recent"></x-products-carousel>
             </div>
         </div>
 
-        <div 
-            class="fb-page" 
-            data-href="https://www.facebook.com/facebook" 
-            data-tabs="" 
-            data-width="" 
-            data-height="" 
-            data-small-header="true" 
-            data-adapt-container-width="false" 
-            data-hide-cover="false" 
-            data-show-facepile="true">
-            <blockquote 
-                cite="https://www.facebook.com/facebook" 
-                class="fb-xfbml-parse-ignore">
-                <a href="https://www.facebook.com/facebook">Facebook</a>
-            </blockquote>
+        <div class="default-layout--heading">
+            <div class="container">
+                <div class="homepage--facebook">
+                    <div 
+                        class="fb-page" 
+                        data-href="https://www.facebook.com/facebook" 
+                        data-tabs="" 
+                        data-width="" 
+                        data-height="" 
+                        data-small-header="true" 
+                        data-adapt-container-width="false" 
+                        data-hide-cover="false" 
+                        data-show-facepile="true">
+                        <blockquote 
+                            cite="https://www.facebook.com/facebook" 
+                            class="fb-xfbml-parse-ignore">
+                            <a href="https://www.facebook.com/facebook">Facebook</a>
+                        </blockquote>
+                    </div>
+                    <div class="homepage--facebook-title">
+                        <div>Харесайте страницата ни в фейсбук!</div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="container">
@@ -51,7 +60,7 @@
                 <div class="default-layout--section-title">
                     Нови предложения
                 </div>
-                <x-products-carousel></x-products-carousel>
+                <x-products-carousel :products="$recent"></x-products-carousel>
             </div>
         </div>
     </div>

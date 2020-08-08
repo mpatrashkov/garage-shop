@@ -153,3 +153,19 @@ label {
 .m0auto {
     margin: 0 auto;
 }
+
+.nav--items {
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    li {
+        margin: 0 10px;
+    }
+}
+
+.no-style {
+    color: inherit;
+    text-decoration: none;
+}

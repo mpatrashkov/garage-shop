@@ -29,7 +29,7 @@
                 <div class="default-layout--section-title">
                     Нови предложения
                 </div>
-                <x-products-carousel></x-products-carousel>
+                <x-products-carousel :products="$recent"></x-products-carousel>
             </div>
         </div>
     </div>

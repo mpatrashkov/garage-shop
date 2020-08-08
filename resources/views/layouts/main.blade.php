@@ -21,21 +21,30 @@
             </div>
             <div class="nav--middle">
                 <div class="nav--title secondaryFont">
-                    Автосервиз
+                    TestTest
                 </div>
                 <ul class="nav--items">
-                    <li>Home</li>
-                    <li>Products</li>
+                    <a href="{{ route("home") }}">
+                        <li>Начало</li>
+                    </a>
+                    <li>/</li>
+                    <a href="{{ route("products") }}">
+                        <li>Продукти</li>
+                    </a>
+                    <li>/</li>
+                    <a href="{{ route("contact-us") }}">
+                        <li>Контакти</li>
+                    </a>
                 </ul>
             </div>
             <div class="nav--end">
                 <div class="nav--action">
                     <span class="material-icons">search</span>
-                    <div>Search</div>
+                    <a href="{{ route("products") }}" class="no-style">Търси</a>
                 </div>
                 <div class="nav--action">
                     <span class="material-icons">map</span>
-                    <div>Find us</div>
+                    <a href="{{ route("contact-us") }}" class="no-style">Намери ни</a>
                 </div>
             </div>
         </nav>
