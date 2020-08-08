@@ -18,4 +18,11 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Route::get('/', "HomeController");
+
 Route::get('/products/{category?}', "ProductsController")->name("products");
+
+Route::get('/contact-us', "ContactUsController");
+
+Route::get('/contact-us/sent', "ContactUsController@showSent");
+
+Route::resource('/request', "RequestController")->only(["store"]);

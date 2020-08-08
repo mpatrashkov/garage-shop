@@ -1,13 +1,13 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="homepage">
-        <div class="homepage--heading">
+    <div class="homepage default-layout">
+        <div class="default-layout--heading">
             <div class="container">
-                <div class="homepage--heading-image">
+                <div class="default-layout--heading-image">
                     <img class="fit" src="https://i0.wp.com/auspusi.bg/wp-content/uploads/2015/09/baner2.jpg?fit=2356%2C1061&ssl=1" />
                 </div>
-                <div class="homepage--heading-title">
+                <div class="default-layout--heading-title">
                     <div>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, 
                         inventore blanditiis. Asperiores suscipit quis nulla adipisci culpa 
@@ -21,8 +21,8 @@
         </div>
 
         <div class="container">
-            <div class="homepage--section">
-                <div class="homepage--section-title">
+            <div class="default-layout--section">
+                <div class="default-layout--section-title">
                     Промоции
                 </div>
                 <x-products-carousel></x-products-carousel>
@@ -47,8 +47,8 @@
         </div>
 
         <div class="container">
-            <div class="homepage--section">
-                <div class="homepage--section-title">
+            <div class="default-layout--section">
+                <div class="default-layout--section-title">
                     Нови предложения
                 </div>
                 <x-products-carousel></x-products-carousel>
