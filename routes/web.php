@@ -18,3 +18,4 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Route::get('/', "HomeController");
+Route::get('/products/{category?}', "ProductsController")->name("products");

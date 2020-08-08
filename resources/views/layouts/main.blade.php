@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="app">
+    <div id="app" class="app">
         <nav class="nav">
             <div class="nav--start">
                 <div class="nav--menu">
@@ -44,8 +44,8 @@
         </main>
     </div>
 
-    <script src="/js/manifest.js"></script>
-    <script src="/js/vendor.js"></script>
+    {{-- <script src="/js/manifest.js"></script>
+    <script src="/js/vendor.js"></script> --}}
     <script src="/js/app.js"></script>
 
     @yield('scripts')

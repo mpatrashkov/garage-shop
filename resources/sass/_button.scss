@@ -6,8 +6,20 @@
     border-radius: 0;
     box-shadow: 3px 3px $secondary;
 
+    background: none;
+
+    color: black;
+    display: block;
+
     &__primary {
         background-color: $primary;
         color: white;
+    }
+
+    &__secondary {
+        border: 1px solid;
+        border-color: $primary;
+
+        box-shadow: none;
     }
 }

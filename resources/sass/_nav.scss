@@ -1,9 +1,9 @@
 .nav {
     background-color: $primary;
 
-    height: 50px;
+    height: $header-height-phone;
     @include media($md) {
-        height: 75px;
+        height: $header-height;
     }
 
     position: -webkit-sticky;

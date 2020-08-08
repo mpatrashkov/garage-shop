@@ -1,0 +1,131 @@
+.products {
+    &--page {
+        display: flex;
+        flex-direction: column;
+
+        @include media($lg) {
+            flex-direction: row;
+        }
+    }
+
+    &--filtersButton {
+        margin: 0 auto;
+        // width: auto;
+        @include media($lg) {
+            display: none;
+        }
+    }
+
+    &--filters {
+        width: 250px;
+        display: none;
+
+        @include media($lg) {
+            display: block;
+        }
+
+        &-sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: $header-height + 20;
+            z-index: 200;
+        }
+    }
+
+    &--items {
+        padding: 0 5px;
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(230px, 100%), 1fr));
+    }
+
+    &--itemsWrapper {
+        width: 100%;
+    }
+
+    &--list {
+        &-item {
+            border-top: 1px solid #ccc;
+
+            padding: 10px 0;
+
+            &-title {
+                font-weight: bold;
+                font-size: 20px;
+            }
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+
+    &--nestedList {
+        margin-left: 15px;
+
+        &-item {
+            margin: 5px 0;
+            padding: 0 15px;
+
+            &__active {
+                background-color: $secondary;
+            }
+        }
+    }
+
+    &--search {
+        width: 100%;
+
+        margin: 20px auto;
+
+        // margin: 20px 0;
+        position: relative;
+
+        @include media($md) {
+            width: 75%;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px 35px 10px 10px;
+        }
+
+        button {
+            position: absolute;
+            right: 0;
+            height: 100%;
+            background: none;
+            border: none;
+        }
+    }
+
+    &--form {
+        &-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+
+            .btn {
+                width: 100%;
+            }
+        }
+    }
+
+    &--noItems {
+        padding: 0 10px;
+        width: 100%;
+
+        text-align: center;
+
+        color: gray;
+
+        // @include media($lg) {
+        //     text-align: unset;
+        // }
+    }
+
+    &--pagination {
+        margin-top: 20px;
+    }
+}
