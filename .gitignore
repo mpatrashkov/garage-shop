@@ -13,3 +13,6 @@ yarn-error.log
 .history
 composer-setup.php
 launch.json
+
+/public/css
+/public/js
