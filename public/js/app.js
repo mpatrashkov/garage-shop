@@ -15598,8 +15598,8 @@ exports.Nav = function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\work\Автосервиз\site\resources\js\app.ts */"./resources/js/app.ts");
-module.exports = __webpack_require__(/*! D:\work\Автосервиз\site\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/miro/dev/work/garage-shop/resources/js/app.ts */"./resources/js/app.ts");
+module.exports = __webpack_require__(/*! /home/miro/dev/work/garage-shop/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

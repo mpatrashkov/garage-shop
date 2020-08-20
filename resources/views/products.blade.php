@@ -25,7 +25,7 @@
                                     <ul class="products--nestedList">
                                         @foreach ($categories as $category)
                                             <li class="products--nestedList-item @if($category->name === $currentCategory) products--nestedList-item__active @endif">
-                                                <a href="{{ route('products', $category->name) }}">
+                                                <a href="{{ route($route, $category->name) }}">
                                                     {{ $category->name }}
                                                 </a>
                                             </li>
@@ -47,7 +47,7 @@
                             </ul>
                             <div class="products--form-buttons">
                                 <button class="btn btn__primary">Филтър</button>
-                                <a href="{{ route('products', $currentCategory) }}">
+                                <a href="{{ route($route, $currentCategory) }}">
                                     <button type="button" class="btn btn__secondary">Изчисти</button>
                                 </a>
                             </div>

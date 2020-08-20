@@ -25,7 +25,7 @@
                 <div class="default-layout--section-title">
                     Промоции
                 </div>
-                <x-products-carousel :products="$recent"></x-products-carousel>
+                <x-products-carousel :products="$promotions"></x-products-carousel>
             </div>
         </div>
 

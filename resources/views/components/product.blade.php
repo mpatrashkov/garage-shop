@@ -6,11 +6,24 @@
         {{ $product->name }}
     </div>
     <div class="product--price">
-        {{ $product->price }}лв
+        @if ($product->discount > 0)
+            <span class="product--price-old">
+                {{ $product->price }}лв
+            </span>
+            <span class="product--price-new">
+                {{ $product->price - $product->discount }}лв
+            </span>
+
+            <div class="product--discount">
+                -{{ ceil(100 * $product->discount / $product->price) }}%
+            </div>
+        @else
+            {{ $product->price }}лв
+        @endif
     </div>
-    <button class="product--shop btn btn__primary">
-        <a href={{ route("product.detail", $product->id) }} style="text-decoration: none; color: inherit;">
-            Купи
+    {{-- <button > --}}
+        <a class="product--shop btn btn__primary" href={{ route("product.detail", $product->id) }} style="text-decoration: none; display: block;">
+            Поръчай
         </a>
-    </button>
+    {{-- </button> --}}
 </div>

@@ -17,7 +17,7 @@ class ProductController extends Controller
         //     return redirect()->to($product->url());
         // }
 
-        $recent = Product::all();
+        $recent = Product::latest()->get();
 
         return view('product.detail', ["product" => $product, "recent" => $recent]);
     }

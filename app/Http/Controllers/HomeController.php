@@ -15,8 +15,9 @@ class HomeController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $recent = Product::all();
+        $promotions = Product::where("discount", ">", "0")->get();
+        $recent = Product::latest()->get();
 
-        return view("homepage", ["recent" => $recent]);
+        return view("homepage", ["recent" => $recent, "promotions" => $promotions]);
     }
 }

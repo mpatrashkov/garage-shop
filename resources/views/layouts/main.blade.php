@@ -8,7 +8,8 @@
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Pacifico&display=swap" rel="stylesheet">
+    {{-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Pacifico&display=swap" rel="stylesheet"> --}}
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
@@ -21,7 +22,7 @@
             </div>
             <div class="nav--middle">
                 <div class="nav--title secondaryFont">
-                    TestTest
+                    {{ setting("site.title") }}
                 </div>
                 <ul class="nav--items">
                     <a href="{{ route("home") }}">
@@ -30,6 +31,10 @@
                     <li>/</li>
                     <a href="{{ route("products") }}">
                         <li>Продукти</li>
+                    </a>
+                    <li>/</li>
+                    <a href="{{ route("discounts") }}">
+                        <li>Промоции</li>
                     </a>
                     <li>/</li>
                     <a href="{{ route("contact-us") }}">

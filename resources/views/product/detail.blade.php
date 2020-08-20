@@ -20,6 +20,11 @@
                     <div class="product-layout--overview-description-price">
                         {!! $product->price !!} {{ config('global.currency') }}
                     </div>
+
+                    <div>
+                        За повече информация: 
+                        <a href="tel: {{ setting('site.phone') }}">{{ setting('site.phone') }}</a>
+                    </div>
                 </div>
             </div>
         </div>

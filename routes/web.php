@@ -19,7 +19,8 @@ Route::group(['prefix' => 'admin'], function () {
 
 Route::get('/', "HomeController")->name("home");
 
-Route::get('/products/{category?}', "ProductsController")->name("products");
+Route::get('/products/{category?}', "ProductsController@all")->name("products");
+Route::get('/discounts/{category?}', "ProductsController@promotions")->name("discounts");
 
 Route::get('/contact-us', "ContactUsController")->name("contact-us");
 
