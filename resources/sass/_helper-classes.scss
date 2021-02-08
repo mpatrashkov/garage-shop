@@ -19,9 +19,9 @@
 }
 
 .mobile-hidden {
-    visibility: hidden;
+    display: none;
 
     @include media($md) {
-        visibility: visible;
+        display: block;
     }
 }
