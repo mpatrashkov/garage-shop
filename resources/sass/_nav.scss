@@ -58,7 +58,7 @@
     &--items {
         position: fixed;
         top: 50px;
-        bottom: 0;
+        // bottom: 0;
         left: 0;
         right: 10%;
 
@@ -68,8 +68,12 @@
 
         color: white;
 
+        padding-bottom: 30px;
+
         @include media($md) {
             position: static;
+
+            padding: 0;
 
             display: flex;
             justify-content: center;
