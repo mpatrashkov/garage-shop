@@ -62,7 +62,7 @@
         left: 0;
         right: 10%;
 
-        background-color: inherit;
+        background-color: $primary;
 
         display: none;
 
@@ -77,9 +77,18 @@
             justify-content: center;
         }
 
+        & > a:first {
+            margin-top: 30px;
+        }
+
+        & > a {
+            margin-left: 20px;
+        }
+
         &__open {
             display: block;
         }
+
         &__spacer {
             visibility: hidden;
             @include media($md) {
