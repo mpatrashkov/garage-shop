@@ -1,10 +1,9 @@
 import { $ } from "./helpers";
 
 export const Nav = () => {
-    console.log($(".nav--menu"));
-
-    $(".nav--menu").onclick = () => {
-        $(".nav--items").classList.toggle("nav--items__open");
-        console.log(111111111111111);
+    window.onload = (event) => {
+        $(".nav--menu").onclick = () => {
+            $(".nav--items").classList.toggle("nav--items__open");
+        };
     };
 };
