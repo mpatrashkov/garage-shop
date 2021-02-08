@@ -70,6 +70,14 @@
 
         padding-bottom: 20px;
 
+        & > a:first {
+            margin-top: 30px;
+        }
+
+        & > a {
+            margin-left: 40px;
+        }
+
         @include media($md) {
             position: static;
 
@@ -77,14 +85,14 @@
 
             display: flex;
             justify-content: center;
-        }
 
-        & > a:first {
-            margin-top: 30px;
-        }
+            & > a:first {
+                margin-top: 0;
+            }
 
-        & > a {
-            margin-left: 40px;
+            & > a {
+                margin-left: 0;
+            }
         }
 
         &__open {
