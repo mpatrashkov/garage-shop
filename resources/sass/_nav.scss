@@ -66,11 +66,9 @@
 
         display: none;
 
-        color: black;
+        color: white;
 
         @include media($md) {
-            color: white;
-
             position: static;
 
             display: flex;
@@ -82,7 +80,7 @@
         }
 
         & > a {
-            margin-left: 20px;
+            margin-left: 40px;
         }
 
         &__open {
