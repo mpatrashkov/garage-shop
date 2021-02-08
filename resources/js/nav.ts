@@ -1,8 +1,8 @@
 import { $ } from "./helpers";
 
 export const Nav = () => {
-    $(".nav--menu")?.addEventListener("click", () => {
-        $(".nav--items")?.classList.toggle("nav--items__open");
+    $(".nav--menu").click(() => {
+        $(".nav--items").toggleClass("nav--items__open");
         console.log(1);
     });
 };

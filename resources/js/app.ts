@@ -7,6 +7,7 @@ import Vue from "vue";
 
 (() => {
     Nav();
+    console.log(12);
 
     // new Glide(".glide", {
     //     perView: 4,
@@ -27,6 +28,6 @@ Vue.use(VueCarousel);
 const app = new Vue({
     el: "#app",
     data: {
-        value: 10
-    }
+        value: 10,
+    },
 });
