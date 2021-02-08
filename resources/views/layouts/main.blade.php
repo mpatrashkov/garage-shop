@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     {{-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Pacifico&display=swap" rel="stylesheet"> --}}
-    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -28,15 +28,15 @@
                     <a href="{{ route("home") }}">
                         <li>Начало</li>
                     </a>
-                    <li>/</li>
+                    <li class="nav--items__spacer">/</li>
                     <a href="{{ route("products") }}">
                         <li>Продукти</li>
                     </a>
-                    <li>/</li>
+                    <li class="nav--items__spacer">/</li>
                     <a href="{{ route("discounts") }}">
                         <li>Промоции</li>
                     </a>
-                    <li>/</li>
+                    <li class="nav--items__spacer">/</li>
                     <a href="{{ route("contact-us") }}">
                         <li>Контакти</li>
                     </a>

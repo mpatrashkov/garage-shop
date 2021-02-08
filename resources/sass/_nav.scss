@@ -62,7 +62,7 @@
         left: 0;
         right: 10%;
 
-        background-color: darken($color: #ffffff, $amount: 20);
+        background-color: inherit;
 
         display: none;
 
@@ -72,7 +72,6 @@
             color: white;
 
             position: static;
-            background-color: inherit;
 
             display: flex;
             justify-content: center;
@@ -80,6 +79,12 @@
 
         &__open {
             display: block;
+        }
+        &__spacer {
+            visibility: hidden;
+            @include media($md) {
+                visibility: visible;
+            }
         }
     }
 
