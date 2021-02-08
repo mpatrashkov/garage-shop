@@ -7,7 +7,6 @@ import Vue from "vue";
 
 (() => {
     Nav();
-    console.log(12);
 
     // new Glide(".glide", {
     //     perView: 4,
