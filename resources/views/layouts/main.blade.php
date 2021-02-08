@@ -43,14 +43,16 @@
                 </ul>
             </div>
             <div class="nav--end">
-                <div class="nav--action">
-                    <span class="material-icons">search</span>
-                    <a href="{{ route("products") }}" class="no-style">Търси</a>
-                </div>
-                <div class="nav--action">
-                    <span class="material-icons">map</span>
-                    <a href="{{ route("contact-us") }}" class="no-style">Намери ни</a>
-                </div>
+                <a href="{{ route("products") }}" class="no-style">
+                    <div class="nav--action">
+                        <span class="material-icons">search</span><span class="mobile-hidden">Търси</span>
+                    </div>
+                </a>
+                <a href="{{ route("contact-us") }}" class="no-style">
+                    <div class="nav--action">
+                        <span class="material-icons">map</span><span class="mobile-hidden">Намери ни</span>
+                    </div>
+                </a>
             </div>
         </nav>
         <main>

@@ -15,5 +15,13 @@
     justify-content: center;
 }
 .mat-icons-mr {
-    margin-right: .3rem;
+    margin-right: 0.3rem;
+}
+
+.mobile-hidden {
+    visibility: hidden;
+
+    @include media($md) {
+        visibility: visible;
+    }
 }
