@@ -38,7 +38,7 @@
                     </blockquote>
                 </div>
                 <div class="homepage--facebook-title">
-                    <div>Харесайте страницата ни в фейсбук!</div>
+                    <div>Харесайте страницата ни във Facebook!</div>
                 </div>
             </div>
         </div>
