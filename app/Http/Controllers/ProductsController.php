@@ -13,16 +13,18 @@ class ProductsController extends Controller
 {
     public function all(Request $request, $category = "")
     {
-        $minMax = DB::raw("min(price) as minPrice, max(price) as maxPrice");
+        $price = DB::table("products")->select(DB::raw("min(price) as minPrice, max(price) as maxPrice"))->first();
 
-        if (!$minMax) {
-            $price->minPrice = 0;
-            $price->maxPrice = 0;
+        if ($price) {
+            $extractedMinPrice = $price->minPrice;
+            $extractedMaxPrice = $price->maxPrice;
         } else {
-            $price = DB::table("products")->select($minMax)->first();
+            $extractedMinPrice = 0;
+            $extractedMaxPrice = 0;
         }
-        $minPrice = $request->input("minPrice", $price->minPrice);
-        $maxPrice = $request->input("maxPrice", $price->maxPrice);
+
+        $minPrice = $request->input("minPrice", $extractedMinPrice);
+        $maxPrice = $request->input("maxPrice", $extractedMaxPrice);
         $search = $request->input("q", "");
 
         // dd($search);
@@ -54,8 +56,8 @@ class ProductsController extends Controller
             "categories" => Category::all(),
             "currentCategory" => $category,
             "price" => [
-                "min" => $price->minPrice,
-                "max" => $price->maxPrice,
+                "min" => $extractedMinPrice,
+                "max" => $extractedMaxPrice,
                 "minValue" => $minPrice,
                 "maxValue" => $maxPrice
             ],
@@ -68,18 +70,22 @@ class ProductsController extends Controller
     public function promotions(Request $request, $category = "")
     {
         $search = $request->input("q", "");
-        $minMax = DB::raw("min(price) as minPrice, max(price) as maxPrice");
-        if (!$minMax) {
-            $price->minPrice = 0;
-            $price->maxPrice = 0;
+
+        $price = DB::table("products")->where([
+            ["name", "like", "%$search%"],
+            ["discount", ">", "0"]
+        ])->select(DB::raw("min(price) as minPrice, max(price) as maxPrice"))->first();
+
+        if ($price) {
+            $extractedMinPrice = $price->minPrice;
+            $extractedMaxPrice = $price->maxPrice;
         } else {
-            $price = DB::table("products")->where([
-                ["name", "like", "%$search%"],
-                ["discount", ">", "0"]
-            ])->select($minMax)->first();
+            $extractedMinPrice = 0;
+            $extractedMaxPrice = 0;
         }
-        $minPrice = $request->input("minPrice", $price->minPrice);
-        $maxPrice = $request->input("maxPrice", $price->maxPrice);
+
+        $minPrice = $request->input("minPrice", $extractedMinPrice);
+        $maxPrice = $request->input("maxPrice", $extractedMaxPrice);
 
         // dd($search);
 
@@ -112,8 +118,8 @@ class ProductsController extends Controller
             "categories" => Category::all(),
             "currentCategory" => $category,
             "price" => [
-                "min" => $price->minPrice,
-                "max" => $price->maxPrice,
+                "min" => $extractedMinPrice,
+                "max" => $extractedMaxPrice,
                 "minValue" => $minPrice,
                 "maxValue" => $maxPrice
             ],
