@@ -30,26 +30,29 @@ class ProductsController extends Controller
         // dd($search);
 
         $products = [];
+        $allProducts = Product::all();
 
-        if ($category) {
-            $products = Product::whereHas("category", function (Builder $query) use ($category, $minPrice, $maxPrice, $search) {
-                $query->where([
-                    ["name", "=", $category],
-                ]);
-            })->with("category")->where([
-                ["price", ">=", $minPrice],
-                ["price", "<=", $maxPrice],
-                ["name", "like", "%$search%"]
-            ])->paginate(20);
-        } else {
-            $products = Product::where([
-                ["price", ">=", $minPrice],
-                ["price", "<=", $maxPrice],
-                ["name", "like", "%$search%"]
-            ])->paginate(20);
+        if ($allProducts->count() == 0) {
+            if ($category) {
+                $products = Product::whereHas("category", function (Builder $query) use ($category, $minPrice, $maxPrice, $search) {
+                    $query->where([
+                        ["name", "=", $category],
+                    ]);
+                })->with("category")->where([
+                    ["price", ">=", $minPrice],
+                    ["price", "<=", $maxPrice],
+                    ["name", "like", "%$search%"]
+                ])->paginate(20);
+            } else {
+                $products = Product::where([
+                    ["price", ">=", $minPrice],
+                    ["price", "<=", $maxPrice],
+                    ["name", "like", "%$search%"]
+                ])->paginate(20);
+            }
         }
 
-        $recent = Product::all();
+        $recent = $allProducts;
 
         return view("products", [
             "products" => $products,
@@ -90,28 +93,31 @@ class ProductsController extends Controller
         // dd($search);
 
         $products = [];
+        $allProducts = Product::all();
 
-        if ($category) {
-            $products = Product::whereHas("category", function (Builder $query) use ($category, $minPrice, $maxPrice, $search) {
-                $query->where([
-                    ["name", "=", $category],
-                ]);
-            })->with("category")->where([
-                ["price", ">=", $minPrice],
-                ["price", "<=", $maxPrice],
-                ["name", "like", "%$search%"],
-                ["discount", ">", "0"]
-            ])->paginate(2);
-        } else {
-            $products = Product::where([
-                ["price", ">=", $minPrice],
-                ["price", "<=", $maxPrice],
-                ["name", "like", "%$search%"],
-                ["discount", ">", "0"]
-            ])->paginate(2);
+        if ($allProducts->count() == 0) {
+            if ($category) {
+                $products = Product::whereHas("category", function (Builder $query) use ($category, $minPrice, $maxPrice, $search) {
+                    $query->where([
+                        ["name", "=", $category],
+                    ]);
+                })->with("category")->where([
+                    ["price", ">=", $minPrice],
+                    ["price", "<=", $maxPrice],
+                    ["name", "like", "%$search%"],
+                    ["discount", ">", "0"]
+                ])->paginate(2);
+            } else {
+                $products = Product::where([
+                    ["price", ">=", $minPrice],
+                    ["price", "<=", $maxPrice],
+                    ["name", "like", "%$search%"],
+                    ["discount", ">", "0"]
+                ])->paginate(2);
+            }
         }
 
-        $recent = Product::all();
+        $recent = $allProducts;
 
         return view("products", [
             "products" => $products,
