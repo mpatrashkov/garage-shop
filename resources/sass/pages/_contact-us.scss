@@ -1,7 +1,8 @@
 .contact-us {
     &--map {
-        width: 740px;
-        height: 376px;
+        @include media($md) {
+            width: 740px;
+        }
         margin: 0 auto;
     }
 }

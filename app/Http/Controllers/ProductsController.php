@@ -14,7 +14,10 @@ class ProductsController extends Controller
     public function all(Request $request, $category = "")
     {
         $price = DB::table("products")->select(DB::raw("min(price) as minPrice, max(price) as maxPrice"))->first();
-
+        if (!$price) {
+            $price->minPrice = 0;
+            $price->maxPrice = 0;
+        }
         $minPrice = $request->input("minPrice", $price->minPrice);
         $maxPrice = $request->input("maxPrice", $price->maxPrice);
         $search = $request->input("q", "");
@@ -67,7 +70,10 @@ class ProductsController extends Controller
             ["name", "like", "%$search%"],
             ["discount", ">", "0"]
         ])->select(DB::raw("min(price) as minPrice, max(price) as maxPrice"))->first();
-
+        if (!$price) {
+            $price->minPrice = 0;
+            $price->maxPrice = 0;
+        }
         $minPrice = $request->input("minPrice", $price->minPrice);
         $maxPrice = $request->input("maxPrice", $price->maxPrice);
 
