@@ -5,7 +5,7 @@
     <div class="default-layout--heading">
         <div class="container">
             <div class="default-layout--heading-image">
-                <img class="fit" src="https://i0.wp.com/auspusi.bg/wp-content/uploads/2015/09/baner2.jpg?fit=2356%2C1061&ssl=1" />
+                <img class="fit" src='{{ setting("site.image") }}' />
             </div>
             <div class="default-layout--heading-title">
                 <div>
