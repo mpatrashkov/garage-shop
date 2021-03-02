@@ -9,10 +9,7 @@
             </div>
             <div class="default-layout--heading-title">
                 <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
-                    inventore blanditiis. Asperiores suscipit quis nulla adipisci culpa
-                    veniam voluptas iste, perferendis error possimus, deleniti aspernatur
-                    provident ea iure deserunt necessitatibus?
+                    {{ setting("site.description") }}
 
                     <button class="btn btn__primary">За нас</button>
                 </div>
