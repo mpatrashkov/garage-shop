@@ -5,7 +5,7 @@
     <div class="default-layout--heading">
         <div class="container">
             <div class="default-layout--heading-image">
-                <img class="fit" src='{{ Voyager::image(setting("site.image")) }}' />
+                <img class="fit" src='{{ Voyager::image(setting("site.image")["download_link"]) }}' />
             </div>
             <div class="default-layout--heading-title">
                 <div>
