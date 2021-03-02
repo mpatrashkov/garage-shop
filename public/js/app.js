@@ -15424,8 +15424,8 @@ vue_1.default.use(vue_carousel_1.default);
 var app = new vue_1.default({
     el: "#app",
     data: {
-        value: 10
-    }
+        value: 10,
+    },
 });
 
 
@@ -15570,11 +15570,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Nav = void 0;
 var helpers_1 = __webpack_require__(/*! ./helpers */ "./resources/js/helpers.ts");
 exports.Nav = function () {
-    var _a;
-    (_a = helpers_1.$(".nav--menu")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", function () {
-        var _a;
-        (_a = helpers_1.$(".nav--items")) === null || _a === void 0 ? void 0 : _a.classList.toggle("nav--items__open");
-    });
+    window.onload = function (event) {
+        helpers_1.$(".nav--menu").onclick = function () {
+            helpers_1.$(".nav--items").classList.toggle("nav--items__open");
+        };
+    };
 };
 
 
@@ -15598,8 +15598,8 @@ exports.Nav = function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/miro/dev/work/garage-shop/resources/js/app.ts */"./resources/js/app.ts");
-module.exports = __webpack_require__(/*! /home/miro/dev/work/garage-shop/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /var/www/chefsgastro/resources/js/app.ts */"./resources/js/app.ts");
+module.exports = __webpack_require__(/*! /var/www/chefsgastro/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
